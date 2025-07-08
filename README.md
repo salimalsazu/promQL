@@ -18,6 +18,8 @@ This project implements a FastAPI application with system-level and HTTP request
    - Metrics: http://localhost:8000/metrics
    - POST data: http://localhost:8000/data (POST JSON payload)
    - GET data: http://localhost:8000/data
+   - UPDATE data: http://localhost:8000/data/{id}
+   - DELETE data: http://localhost:8000/data/{id}
 
 ## Prometheus Dashboard Access
 

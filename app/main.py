@@ -21,7 +21,6 @@ async def root():
 
 @app.get("/metrics")
 async def metrics():
-    # Return all Prometheus metrics
     data = generate_latest()
     return Response(content=data, media_type=CONTENT_TYPE_LATEST)
 
@@ -29,3 +28,5 @@ async def metrics():
 @app.on_event("startup")
 async def startup_event():
     asyncio.create_task(system_metrics.collect_system_metrics_periodically())
+
+
